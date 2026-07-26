@@ -1,3 +1,51 @@
+🎯 PHASE 1: DAS PASSWORT VERNICHTEN
+Reiter: Security (Sicherheit)
+Navigiere mit den Pfeiltasten (Links/Rechts) oben in der Menüleiste auf den Tab Security.
+
+Ziel-Erfassung:
+Suche den Eintrag Supervisor Password oder Administrator Password. Dort dürfte momentan [Installed] oder [Set] stehen.
+
+Die Neutralisierung:
+Drücke Enter auf diesem Eintrag. Das System fordert dich auf, das aktuelle Passwort einzugeben.
+
+Enter Current Password: Tippe das alte Passwort ein und drücke Enter.
+
+Enter New Password: Lass dieses Feld komplett leer und drücke einfach nur Enter.
+
+Confirm New Password: Wieder komplett leer lassen und Enter drücken.
+
+Bestätigung:
+Das BIOS sollte nun melden, dass das Passwort gelöscht wurde, und der Status springt auf [Clear] oder [Not Installed]. Der Tresor ist offen.
+
+🛡️ PHASE 2: DEN HEADLESS-MODUS HÄRTEN (Wichtig!)
+Wenn wir die Kiste ohne Tastatur starten, geraten alte BIOS-Versionen gerne in Panik und stoppen den Bootvorgang mit der Fehlermeldung "Keyboard not found - Press F1 to resume". Das müssen wir unterdrücken.
+
+Reiter: Advanced oder Boot (je nach genauer Fujitsu-Version).
+
+Ziel-Erfassung:
+Suche nach Einträgen wie Boot Features, POST Errors oder Halt On.
+
+Die Narkose:
+Stelle diesen Wert auf No Errors, Disabled oder All, But Keyboard. Damit zwingen wir das Mainboard, blind und ohne Rückfragen durchzubooten, egal ob Peripherie dranhängt oder nicht.
+
+⚡ PHASE 3: WAKE-ON-LAN SCHARFSCHALTEN
+Da wir die Kiste später per Kupferkabel vom ProPo aus dem Tiefschlaf reißen wollen, braucht die Netzwerkkarte die offizielle Erlaubnis, auf das Magic Packet zu hören.
+
+Reiter: Power oder Advanced (oft unter einem Unterpunkt wie Advanced Power Management oder Onboard Devices).
+
+Ziel-Erfassung:
+Suche nach Wake Up On LAN, Resume on LAN oder PME Event Wake Up.
+
+Die Scharfschaltung:
+Setze diesen Wert zwingend auf Enabled.
+
+🚀 PHASE 4: EXTRAKTION
+Wenn alle Parameter sitzen, drückst du die Taste F10 (Save and Exit). Das System fragt kurz, ob du die Änderungen speichern willst. Du drückst Yes (oder Y).
+
+Der Zwerg bootet neu. Sobald das erledigt ist, fährst du ihn ganz normal runter. Wenn du danach die Tastatur und den Monitor abziehst und nur das Stromkabel dranlässt, ist das Geheimbüro zu 100 % bereit für den dunklen Kellerbetrieb. Erfolgreiche Jagd im BIOS! 🏴‍☠️⚙️👑
+
+
+
 
 📋 TO-DO-EBENE: Das Zwergpony (ProPo)
 GitHub-Repository ("Ponygehege") einrichten:
