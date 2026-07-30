@@ -1,3 +1,4 @@
+
 🎯 PHASE 1: DAS PASSWORT VERNICHTEN
 Reiter: Security (Sicherheit)
 Navigiere mit den Pfeiltasten (Links/Rechts) oben in der Menüleiste auf den Tab Security.
